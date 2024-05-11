@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Basics</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jersey+25+Charted&family=Noto+Sans+JP:wght@100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        .jersey-25-charted-regular {
+            font-family: "Jersey 25 Charted", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 50px;
+        }
+
+        .position-example {
+            width: 500px;
+            height: 200px;
+            background-color: rgb(99, 73, 184);
+            position: absolute;
+            top: 500px;
+            right: 0;
+        }
+
+        p {
+            border: 1px solid red;
+            display: inline-block;
+            height: 50px;
+        }
+
+        .inherit-demo .main {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            ;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="position-example">
+
+    </div>
+
+    <p>Test</p>
+    <p>Test 1 fdsfdsf fds fssdf sdf dsfsd fds fdsfdsf</p>
+    <p>Test 1 fdsfdsf fds fssdf sdf dsfsd fds fdsfdsf</p>
+    <p>Test 1 fdsfdsf fds fssdf sdf dsfsd fds fdsfdsf</p>
+    <p>Test 1 fdsfdsf fds fssdf sdf dsfsd fds fdsfdsf</p>
+    <p>Test 1 fdsfdsf fds fssdf sdf dsfsd fds fdsfdsf</p>
+    <p>Test 1 fdsfdsf fds fssdf sdf dsfsd fds fdsfdsf</p>
+    <p>Test 1 fdsfdsf fds fssdf sdf dsfsd fds fdsfdsf</p>
+    <div class="header">
+
+    </div>
+    <div class="background-style">
+
+    </div>
+    <div class="parent">
+        <p>TEST</p>
+        <p>TEST</p>
+        <div class="child">
+            <p>Inner TEST</p>
+            <img width="100" height="100" alt="image" src="../assets/smiley.gif" />
+            <img width="100" height="100" alt="image" src="../assets/smiley.gif" />
+        </div>
+    </div>
+    <div class="para">
+        <h1>Paragraph contents</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus ab sed quidem aut eius placeat,
+            totam nihil reprehenderit eaque quas, omnis iure nemo magnam deleniti impedit modi vel quia unde soluta
+            aliquid quos consectetur ullam! Dignissimos delectus maiores nemo a distinctio molestias temporibus
+            exercitationem similique minus eveniet tenetur, praesentium quas non! Esse, quos ipsa ducimus expedita
+            enim reiciendis eveniet? Facere necessitatibus saepe voluptates eius veritatis natus a alias recusandae
+            error eos odio, nihil eaque doloribus, blanditiis deserunt vitae quisquam repellat maxime, amet iusto
+            quod sapiente suscipit? Quisquam dignissimos magni ut molestiae atque repellendus, cum tempore provident
+            suscipit, adipisci reiciendis ratione.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus ab sed quidem aut eius placeat,
+            totam nihil reprehenderit eaque quas, omnis iure nemo magnam deleniti impedit modi vel quia unde soluta
+            aliquid quos consectetur ullam! Dignissimos delectus maiores nemo a distinctio molestias temporibus
+            exercitationem similique minus eveniet tenetur, praesentium quas non! Esse, quos ipsa ducimus expedita
+            enim reiciendis eveniet? Facere necessitatibus saepe voluptates eius veritatis natus a alias recusandae
+            error eos odio, nihil eaque doloribus, blanditiis deserunt vitae quisquam repellat maxime, amet iusto
+            quod sapiente suscipit? Quisquam dignissimos magni ut molestiae atque repellendus, cum tempore provident
+            suscipit, adipisci reiciendis ratione.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus ab sed quidem aut eius placeat,
+            totam nihil reprehenderit eaque quas, omnis iure nemo magnam deleniti impedit modi vel quia unde soluta
+            aliquid quos consectetur ullam! Dignissimos delectus maiores nemo a distinctio molestias temporibus
+            exercitationem similique minus eveniet tenetur, praesentium quas non! Esse, quos ipsa ducimus expedita
+            enim reiciendis eveniet? Facere necessitatibus saepe voluptates eius veritatis natus a alias recusandae
+            error eos odio, nihil eaque doloribus, blanditiis deserunt vitae quisquam repellat maxime, amet iusto
+            quod sapiente suscipit? Quisquam dignissimos magni ut molestiae atque repellendus, cum tempore provident
+            suscipit, adipisci reiciendis ratione.</p>
+    </div>
+
+    <a class="highlight" href="#">Test link</a>
+
+    <div class="container">testing</div>
+    <div class="jersey-25-charted-regular">testing</div>
+    <i class="fa-solid fa-cart-shopping">test</i>
+
+
+    <div class="inherit-demo" style="display: flex; flex-direction: row;">
+        <div class="main" style="display: inherit;flex-direction: column;">
+            <div class="child">11</div>
+            <div class="child">12</div>
+            <div class="child">13</div>
+        </div>
+        <div class="main">1111</div>
+        <div class="main">1111</div>
+        <div class="main">1111</div>
+    </div>
+</body>
+
+</html>

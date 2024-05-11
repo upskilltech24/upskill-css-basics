@@ -1,0 +1,59 @@
+/* Descendent */
+.parent p {
+    color: red;
+}
+
+/* Child */
+.parent>p {
+    color: green;
+}
+
+/* Siblings 
+Immediate sibling*/
+
+p+img {
+    border: 5px solid red;
+}
+
+/* Siblings 
+All subsequent siblings*/
+.para~p {
+    color: blue;
+}
+
+a.highlight:hover {
+    color: chocolate;
+}
+
+
+
+.container {
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+    background-color: aqua;
+}
+
+.container:hover {
+    background-color: bisque;
+}
+
+.container {
+    background-image: url('../assets/smiley.gif');
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+}
+
+.background-style {
+    width: 500px;
+    height: 400px;
+    background-color: aqua;
+    background-image: url(../assets/smiley.gif);
+    background-repeat: no-repeat;
+}
+
+.header {
+    width: 100%;
+    height: 200px;
+    background: url(../assets/bg.png)
+}
