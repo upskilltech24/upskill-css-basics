@@ -23,6 +23,22 @@
     bottom: 0;
 }
 
+
+.absolutePos {
+    background-color: #73AD21;
+    width: 500px;
+    height: 500px;
+}
+
+.relativePos {
+    position: relative;
+    top: 50px;
+    left: 100px;
+    background-color: brown;
+    width: 100px;
+    height: 100px;
+}
+
 .absolute {
     position: absolute;
     top: 100px;

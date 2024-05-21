@@ -1,0 +1,29 @@
+.main-container {
+    background-color: rgb(237, 103, 25);
+    padding: 25px;
+}
+
+.sub-container {
+    background-color: bisque;
+    padding: 20px;
+}
+
+.sub-container p {
+    color: red;
+}
+
+.sub-container span {
+    color: black;
+}
+
+.sub-container>span {
+    background-color: rgb(35, 19, 214);
+}
+
+div+p {
+    color: rgb(83, 220, 108);
+}
+
+.para~p {
+    color: rgb(200, 17, 63);
+}
