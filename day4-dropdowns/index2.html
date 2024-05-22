@@ -29,7 +29,7 @@
 
         ul li {
             background-color: aquamarine;
-            width: 100px;
+            min-width: 150px;
             padding: 15px;
             border-bottom: 1px solid rgb(3, 117, 68);
         }
@@ -42,11 +42,32 @@
             color: #FFF;
         }
 
-
-
         ul li a {
             color: #221f1f;
             text-decoration: none;
+        }
+
+        li.dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px 0px rgba(204, 11, 11, 0.2);
+            z-index: 1;
+            top: 0;
+            left: 150px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content-mobile {
+            display: none;
         }
 
         @media screen and (max-width: 900px) {
@@ -63,6 +84,12 @@
             ul li {
                 border-bottom: 0;
                 border-right: 1px solid rgb(3, 117, 68);
+                min-width: 100px;
+            }
+
+            .dropdown-content {
+                top: 48.4px;
+                left: 0px;
             }
         }
 
@@ -77,11 +104,48 @@
                 padding-left: 0px;
                 padding-right: 0px;
             }
+
+            .dropdown-content-mobile {
+                display: none;
+            }
+
+            ul li a {
+                display: block;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: none;
+            }
         }
     </style>
+
+    <script>
+
+        function onLoad() {
+            document.getElementById('courses').addEventListener('click', showSubmenu);
+
+            window.addEventListener("resize", hideMenu);
+
+            function showSubmenu() {
+                if (window.innerWidth <= 600) {
+                    const menuRef = document.getElementById('mobile-menu');
+                    if (menuRef.style.display === "" || menuRef.style.display === "none") {
+                        menuRef.style.display = 'block';
+                    } else if (menuRef.style.display === "block") {
+                        menuRef.style.display = 'none';
+                    }
+                }
+            }
+
+            function hideMenu() {
+                const menuRef = document.getElementById('mobile-menu');
+                menuRef.style.display = 'none';
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body onload="onLoad()">
     <div class="main-container">
         <div class="menu-container">
             <ul class="sidenav">
@@ -89,6 +153,20 @@
                 <li><a href="#news">News</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#about">About</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn" id="courses">Courses</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                    </ul>
+                </li>
+                <ul class="dropdown-content-mobile" id="mobile-menu">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+                <li><a href="#ref">Reference</a></li>
             </ul>
         </div>
 
