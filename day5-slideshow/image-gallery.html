@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-container {
+            background-color: #000;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            flex: 0.5;
+            background-color: #FFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header h1 {
+            text-align: center;
+        }
+
+        .content {
+            flex: 4;
+        }
+
+        .img-container {
+            background-color: aquamarine;
+            margin: 0 auto;
+            display: flex;
+            position: relative;
+        }
+
+        .img-container img {
+            min-width: 100%;
+            height: auto;
+        }
+
+        .description {
+            position: absolute;
+            bottom: 0;
+            background-color: #000;
+            color: #FFF;
+            width: 100%;
+            text-align: center;
+            padding: 15px 0px;
+            opacity: 0.4;
+        }
+
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .footer {
+            height: 100px;
+        }
+
+        .footer-image {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .footer-image div {
+            width: 200px;
+            height: 100px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1>Photo gallery</h1>
+        </div>
+        <div class="content">
+            <div class="img-container">
+                <img src="../assets/img_mountains_wide.jpg" />
+                <div class="description">Sample text</div>
+                <a class="prev">❮</a>
+                <a class="next">❯</a>
+            </div>
+            <div class="footer">
+                <div class="footer-image">
+                    <div style="background-image: url(../assets/img_mountains_wide.jpg);"></div>
+                    <div style="background-image: url(../assets/img_nature_wide.jpg);"></div>
+                    <div style="background-image: url('../assets/img_snow_wide.jpg');"></div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
