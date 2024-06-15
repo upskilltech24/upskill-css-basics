@@ -24,30 +24,23 @@
         }
 
         .header {
-            flex: 0.5;
             background-color: #FFF;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .header h1 {
             text-align: center;
         }
 
-        .content {
-            flex: 4;
-        }
-
         .img-container {
-            background-color: aquamarine;
+            background-color: rgb(60, 61, 61);
             margin: 0 auto;
-            display: flex;
             position: relative;
+            flex: 1;
+            width: 100%;
         }
 
         .img-container img {
-            min-width: 100%;
+            width: 100%;
             height: auto;
         }
 
@@ -68,7 +61,7 @@
         .next {
             cursor: pointer;
             position: absolute;
-            top: 40%;
+            top: 50%;
             width: auto;
             padding: 16px;
             margin-top: -50px;
@@ -92,20 +85,13 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
 
-        .footer {
-            height: 100px;
-        }
-
-        .footer-image {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-        }
-
         .footer-image div {
             width: 200px;
             height: 100px;
-            margin: 0 10px;
+            margin: 10px 10px;
+            float: left;
+            border: 1px solid #FFF;
+            box-shadow: 2px 2px 10px #888888;
         }
     </style>
 </head>
@@ -115,20 +101,17 @@
         <div class="header">
             <h1>Photo gallery</h1>
         </div>
-        <div class="content">
-            <div class="img-container">
-                <img src="../assets/img_mountains_wide.jpg" />
-                <div class="description">Sample text</div>
-                <a class="prev">❮</a>
-                <a class="next">❯</a>
-            </div>
-            <div class="footer">
-                <div class="footer-image">
-                    <div style="background-image: url(../assets/img_mountains_wide.jpg);"></div>
-                    <div style="background-image: url(../assets/img_nature_wide.jpg);"></div>
-                    <div style="background-image: url('../assets/img_snow_wide.jpg');"></div>
-                </div>
-            </div>
+        <div class="img-container">
+            <img src="../assets/giraffe.jpeg" />
+            <div class="description">Sample text</div>
+            <a class="prev">❮</a>
+            <a class="next">❯</a>
+        </div>
+        <div class="footer-image">
+            <div style="background-image: url(../assets/img_mountains_wide.jpg);"></div>
+            <div style="background-image: url(../assets/img_nature_wide.jpg);"></div>
+            <div style="background-image: url('../assets/img_snow_wide.jpg');"></div>
+            <div style="background-image: url('../assets/giraffe.jpeg');"></div>
         </div>
 </body>
 

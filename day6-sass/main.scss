@@ -1,0 +1,37 @@
+@import "color";
+@import "border";
+@import "bg";
+
+$myFont: Helvetica, sans-serif;
+$myColor1: rgb(35, 233, 64);
+$myColor2: red;
+$myFontSize: 18px;
+$myWidth: 680px;
+
+body {
+    font-family: $myFont;
+    font-size: $myFontSize;
+
+}
+
+#container {
+    width: $myWidth;
+}
+
+p {
+    color: $myColor1;
+}
+
+span {
+    color: $myColor1;
+}
+
+.nav {
+    ul {
+        border: 1px solid red;
+
+        li {
+            color: red;
+        }
+    }
+}

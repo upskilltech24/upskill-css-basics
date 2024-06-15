@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .pagination {
+            display: inline-block;
+        }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Active and Hoverable Pagination</h2>
+
+    <p>Move the mouse over the numbers.</p>
+
+    <div class="pagination">
+        <a href="#" onclick="">&laquo;</a>
+        <a href="#" id="1" onclick="setActive('1')">1</a>
+        <a class="" href="#" id="2" onclick="setActive('2')">2</a>
+        <a href="#" id="3" onclick="setActive('3')">3</a>
+        <a href="#" id="4" onclick="setActive('4')">4</a>
+        <a href="#" id="5" onclick="setActive('5')">5</a>
+        <a href="#" id="6" onclick="setActive('6')">6</a>
+        <a href="#" id="7" onclick="setActive('7')">&raquo;</a>
+    </div>
+
+</body>
+<script>
+    let selectedItem;
+    function setActive(id) {
+        if (selectedItem) {
+            selectedItem.classList = '';
+        }
+        selectedItem = document.getElementById(id);
+        selectedItem.classList.add('active');
+    }
+</script>
+
+</html>
